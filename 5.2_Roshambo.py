@@ -11,13 +11,18 @@ When the user quits print a win/loss record
 
 '''
 
+print("this is a game of Roshambo")
+print("enter 1 for rock, 2 for paper, and 3 for scissors.")
 
+userrps = input("Rock, Paper, or Scissors?")
 
+import random
+rps = random.randrange(3)
 
-
-
-
-
-
-
+if rps == 0:
+    print("Rock")
+elif rps == 1:
+    print("Paper")
+else:
+    print("Scissors")
 
