@@ -1,7 +1,7 @@
 print("this is a game of Roshambo")
 
 #user input
-userrps = int(input("\r\nenter 1 for rock, 2 for paper, and 3 for scissors."))
+userrps = int(input("\r\nenter 1 for rock, 2 for paper, and 3 for scissors. \r\n 'q' to quit"))
 print("\r\nuser input:")
 if userrps == 1:
     print("rock")
