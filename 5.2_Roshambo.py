@@ -14,7 +14,7 @@ When the user quits print a win/loss record
 print("this is a game of Roshambo")
 
 #user input
-userrps = input("\r\nenter 1 for rock, 2 for paper, and 3 for scissors.")
+userrps = int(input("\r\nenter 1 for rock, 2 for paper, and 3 for scissors."))
 print("\r\nuser input:")
 if userrps == 1:
     print("rock")
@@ -36,7 +36,22 @@ else:
     print("Scissors")
 
 #result of match
-if userrps == rps:
+print("\r\nresult:")
+
+if userrps == 1:
+    if rps == 2:
+        print("you lost")
+    else:
+        print("you won")
+elif userrps == 2:
+    if rps == 3:
+        print("you lost")
+    else:
+        print("you won")
+elif userrps == 3:
+    if rps == 1:
+        print("you lost")
+    else:
+        print("you won")
+else:
     print("Tie")
-
-
