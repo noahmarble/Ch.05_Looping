@@ -12,46 +12,75 @@ When the user quits print a win/loss record
 '''
 
 print("this is a game of Roshambo")
+win = 0
+loss = 0
+game = True
+while game:
+    #user input
+    userrps = str(input("\r\ntype'q'to quit\r\nenter 1 for rock, 2 for paper, and 3 for scissors."))
 
-#user input
-userrps = int(input("\r\nenter 1 for rock, 2 for paper, and 3 for scissors."))
-print("\r\nuser input:")
-if userrps == 1:
-    print("rock")
-elif userrps == 2:
-    print("paper")
-else:
-    print("scissors")
+    if userrps == "q":
+        print("win/loss:", win, "/", loss)
+        game = False
+        break
 
-#computer input
-print("comptuer input:")
-import random
-rps = random.randrange(1,4)
-
-if rps == 1:
-    print("rock")
-elif rps == 2:
-    print("Paper")
-else:
-    print("Scissors")
-
-#result of match
-print("\r\nresult:")
-
-if userrps == 1:
-    if rps == 2:
-        print("you lost")
+    print("user input:")
+    if userrps == "1":
+        print("rock")
+    elif userrps == "2":
+        print("paper")
     else:
-        print("you won")
-elif userrps == 2:
-    if rps == 3:
-        print("you lost")
+        print("scissors")
+
+    #computer input
+    print("comptuer input:")
+    import random
+    rps = str(random.randrange(1,4))
+
+    if rps == "1":
+        print("rock")
+    elif rps == "2":
+        print("Paper")
     else:
-        print("you won")
-elif userrps == 3:
-    if rps == 1:
-        print("you lost")
-    else:
-        print("you won")
-else:
-    print("Tie")
+        print("Scissors")
+
+    #result of match
+
+
+    if userrps == "1":
+        if rps == "2":
+            print("\r\nresult:")
+            print("you lost")
+            loss+=1
+        elif rps == "3":
+            print("\r\nresult:")
+            print("you won")
+            win+=1
+        else:
+            print("tie")
+
+
+    elif userrps == "2":
+        if rps == "3":
+            print("\r\nresult:")
+            print("you lost")
+            loss+=1
+        elif rps == "1":
+            print("\r\nresult:")
+            print("you won")
+            win+=1
+        else:
+            print("tie")
+
+
+    elif userrps == "3":
+        if rps == "1":
+            print("\r\nresult:")
+            print("you lost")
+            loss+=1
+        elif rps == "2":
+            print("\r\nresult:")
+            print("you won")
+            win+=1
+        else:
+            print("tie")
