@@ -14,6 +14,7 @@ When the user quits print a win/loss record
 print("this is a game of Roshambo")
 win = 0
 loss = 0
+tie = 0
 game = True
 while game:
     #user input
@@ -21,6 +22,7 @@ while game:
 
     if userrps == "q":
         print("win/loss:", win, "/", loss)
+        print("ties:", tie)
         game = False
         break
 
@@ -58,6 +60,7 @@ while game:
             win+=1
         else:
             print("tie")
+            tie+=1
 
 
     elif userrps == "2":
@@ -71,6 +74,7 @@ while game:
             win+=1
         else:
             print("tie")
+            tie += 1
 
 
     elif userrps == "3":
@@ -84,3 +88,4 @@ while game:
             win+=1
         else:
             print("tie")
+            tie += 1
