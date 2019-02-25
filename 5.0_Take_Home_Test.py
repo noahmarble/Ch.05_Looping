@@ -21,17 +21,16 @@ for i in range(2,101,2):
     print(i)
 
 
-
-
 '''
   3. Write a program that will use a WHILE loop to count from
      10 down to, and including, 0. Then print the words Blast off! Remember, use
      a WHILE loop, don't use a FOR loop.
 '''
-
-
-
-
+i = 10
+while i > -1:
+    print (i)
+    i-=1
+print("Blast Off!")
 
 
 '''
