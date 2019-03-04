@@ -12,13 +12,14 @@ print("C O M M A N D S :\n")
 print("A. do MAINTENANCE on the jeep")
 print("B. Ahead MODERATE SPEED")
 print("C. Ahead FULL SPEED")
-print("D. STOP for the night")
+print("D. STOP AND REFUEL")
 print("E. STATUS check")
 print("F. HOPE for help")
 print("Q. To quit\n")
 
 print("the game is starting...\n")
 
+import random
 #variables
 done = False
 milestraveled = 0
@@ -31,7 +32,7 @@ while not done:
     print("A. do MAINTENANCE on the jeep") #drink from canteen
     print("B. Ahead MODERATE SPEED")
     print("C. Ahead FULL SPEED")
-    print("D. STOP for the night")
+    print("D. STOP AND REFUEL")
     print("E. STATUS check")
     print("F. HOPE for help")
     print("Q. To quit\n")
@@ -40,9 +41,19 @@ while not done:
     choice = input("What is your choice? ")
     if choice.lower() == ("q") or choice.lower() == ("quit"):
         done = True
+
+    #status
     elif choice.lower() == ("e") or choice.lower() == ("status"):
         print("miles traveled:", milestraveled)
         print("gas:", gas)
-        print("the big dude on the harley is", bigdude, "behind you\n")
+        print("the big dude on the harley is", -bigdude, "miles behind you\n")
+
+    #stop and refuel
+    elif choice.lower() == "d" or choice.lower() == ("STOP AND REFUEL"):
+        gas = 10
+        randomseventofourteen = random.randrange(7,15)
+        bigdude+= randomseventofourteen
+
+
 
 
