@@ -22,14 +22,13 @@ print("the game is starting...\n")
 #variables
 done = False
 milestraveled = 0
-thirst = 0
-gas = 10
-brokenparts = 0
-bigdude = -20
+gas = 10             #your thirst
+brokenparts = 0      #camel tierdness
+bigdude = -20        #natives
 
 #command
 while not done:
-    print("A. do MAINTENANCE on the jeep")
+    print("A. do MAINTENANCE on the jeep") #drink from canteen
     print("B. Ahead MODERATE SPEED")
     print("C. Ahead FULL SPEED")
     print("D. STOP for the night")
@@ -39,7 +38,11 @@ while not done:
 
     #quit
     choice = input("What is your choice? ")
-    if choice.lower() == ("q"):
+    if choice.lower() == ("q") or choice.lower() == ("quit"):
         done = True
+    elif choice.lower() == ("e") or choice.lower() == ("status"):
+        print("miles traveled:", milestraveled)
+        print("gas:", gas)
+        print("the big dude on the harley is", bigdude, "behind you\n")
 
 
