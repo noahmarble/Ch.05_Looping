@@ -77,10 +77,10 @@ while not done:
 
     #maitnance
     elif choice.lower() == "a" or choice.lower() == "maitnence":
-        if tools >= 1
+        if tools >= 1:
             tools-= 1
-            broken parts = 0
-        else
+            brokenparts = 0
+        else:
             print("error, no drinks")
 
 
