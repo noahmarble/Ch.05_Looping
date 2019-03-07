@@ -92,7 +92,7 @@ while not done:
         print ("you are low on gas")
 
     #broken parts
-    if brokenparts == 8:
+    if brokenparts == 8 and brokenparts:
         print("yor Jeep is broken down")
 
     elif brokenparts >= 5:
