@@ -81,7 +81,7 @@ while not done:
             tools-= 1
             brokenparts = 0
         else:
-            print("error, no drinks")
+            print("error, no tools")
 
 
     #gas
@@ -114,7 +114,8 @@ while not done:
     if random == 1:
         print("you have found an oasis")
         gas = 6
-        brokenparts= 0
+        brokenparts = 0
+        tools = 3
 
 
 
