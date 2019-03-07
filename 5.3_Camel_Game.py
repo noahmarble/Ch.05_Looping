@@ -46,11 +46,11 @@ while not done:
     elif choice.lower() == "e" or choice.lower() == "status":
         print("miles traveled:", milestraveled)
         print("gas:", gas)
-        print("the big dude on the harley is", -(bigdude), "miles behind you\n")
+        print("the big dude on the harley is", bigdude, "miles behind you\n")
 
     #stop and refuel
     elif choice.lower() == "d" or choice.lower() == "stop and refuel":
-        gas = 10
+        gas = 6
         randomseventofourteen = random.randrange(7,15)
         bigdude+= randomseventofourteen
 
@@ -106,8 +106,15 @@ while not done:
     elif bigdude-15 >= milestraveled:
         print("the natives are getting close")
 
+    #win
+    if milestraveled >= 200 and bigdude+20<milestraveled and brokenparts<8 and gas>0:
+        print("you have won!")
 
-
+    random.randrange(0,21)
+    if random == 1:
+        print("you have found an oasis")
+        gas = 6
+        brokenparts= 0
 
 
 
