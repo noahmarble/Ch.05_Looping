@@ -46,7 +46,7 @@ while not done:
     elif choice.lower() == "e" or choice.lower() == "status":
         print("miles traveled:", milestraveled)
         print("gas:", gas)
-        print("the big dude on the harley is", -bigdude, "miles behind you\n")
+        print("the big dude on the harley is", -(bigdude), "miles behind you\n")
 
     #stop and refuel
     elif choice.lower() == "d" or choice.lower() == "stop and refuel":
@@ -85,13 +85,27 @@ while not done:
 
 
     #gas
-    elif gas <= 0:
+    if gas <= 0:
         print("you have ran out of gas")
-        break
+
     elif gas <= 2:
         print ("you are low on gas")
 
     #broken parts
+    if brokenparts == 8:
+        print("yor Jeep is broken down")
+
+    elif brokenparts >= 5:
+        print("your Jeep is breaking down")
+
+    #bigdude
+    if bigdude == milestraveled:
+        print("the big dude on a Harley has cuaght up to you")
+        print("Game over")
+
+    elif bigdude-15 >= milestraveled:
+        print("the natives are getting close")
+
 
 
 
