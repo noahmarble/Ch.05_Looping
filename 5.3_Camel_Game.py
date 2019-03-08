@@ -14,7 +14,6 @@ print("B. Ahead MODERATE SPEED")
 print("C. Ahead FULL SPEED")
 print("D. STOP AND REFUEL")
 print("E. STATUS check")
-print("F. HOPE for help")
 print("Q. To quit\n")
 
 print("the game is starting...\n")
@@ -34,7 +33,6 @@ while not done:
     print("C. Ahead FULL SPEED")
     print("D. STOP AND REFUEL")
     print("E. STATUS check")
-    print("F. HOPE for help")
     print("Q. To quit\n")
 
     #quit
@@ -46,7 +44,8 @@ while not done:
     elif choice.lower() == "e" or choice.lower() == "status":
         print("miles traveled:", milestraveled)
         print("gas:", gas)
-        print("the big dude on the harley is", bigdude, "miles behind you\n")
+        print("the big dude on the harley is", -(bigdude), "miles behind you")
+        print("you have", tools, "tools left to fix your jeep\n")
 
     #stop and refuel
     elif choice.lower() == "d" or choice.lower() == "stop and refuel":
@@ -92,26 +91,30 @@ while not done:
         print ("you are low on gas")
 
     #broken parts
-    if brokenparts == 8 and brokenparts:
-        print("yor Jeep is broken down")
+    if brokenparts >= 8:
+        print("your Jeep is broken down")
+        print("Game over")
+        done = True
 
     elif brokenparts >= 5:
         print("your Jeep is breaking down")
 
     #bigdude
-    if bigdude == milestraveled:
+    if bigdude >= milestraveled:
         print("the big dude on a Harley has cuaght up to you")
         print("Game over")
+        done = True
 
-    elif bigdude-15 >= milestraveled:
-        print("the natives are getting close")
+    elif bigdude+15 >= milestraveled:
+        print("the big dude an a harley is getting close")
 
     #win
-    if milestraveled >= 200 and bigdude+20<milestraveled and brokenparts<8 and gas>0:
+    if milestraveled >= 200 and bigdude+20 < milestraveled and brokenparts < 8 and gas > 0:
         print("you have won!")
 
-    random.randrange(0,21)
-    if random == 1:
+    #oasis
+    randomzerototwentey=random.randrange(0,21)
+    if randomzerototwentey == 1:
         print("you have found an oasis")
         gas = 6
         brokenparts = 0
