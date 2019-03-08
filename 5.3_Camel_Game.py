@@ -6,7 +6,7 @@ The pseudo-code for how to code this game is in Chapter 5 of the Python Jedi boo
 '''
 # introductip and controls
 print("Welcome to JEEP. The object is to travel 200 miles across MOAB Utah.")
-print("You will be avoiding broken parts, running ot of gas, and the big dude on a harley")
+print("You will be avoiding broken parts, running out of gas, and the big dude on a Harley")
 print("You will be asked for commands every so often.")
 print("C O M M A N D S :\n")
 print("A. do MAINTENANCE on the jeep")
@@ -44,7 +44,7 @@ while not done:
     elif choice.lower() == "e" or choice.lower() == "status":
         print("miles traveled:", milestraveled)
         print("gas:", gas)
-        print("the big dude on the harley is", -(bigdude), "miles behind you")
+        print("the big dude on the harley is", (milestraveled-bigdude), "miles behind you")
         print("you have", tools, "tools left to fix your jeep\n")
 
     #stop and refuel
@@ -111,6 +111,7 @@ while not done:
     #win
     if milestraveled >= 200 and bigdude+20 < milestraveled and brokenparts < 8 and gas > 0:
         print("you have won!")
+        done = True
 
     #oasis
     randomzerototwentey=random.randrange(0,21)
