@@ -3,13 +3,13 @@ HONOR CODE: I solemnly promise that while taking this test I will only use PyCha
 but I will definitely not ask another person except the instructor. Signed: ______________________
  1. Make the following program work.
    '''
-     print("This program takes three numbers and returns the sum.")
-     total = 0
+print("This program takes three numbers and returns the sum.")
+total = 0
 
-     for i in range(3):
-         x = input("Enter a number: ")
-         total = total + i
-     print("The total is:", x)
+for i in range(3):
+    x = int(input("Enter a number: "))
+    total += x
+print("The total is:", total)
 
 
 
